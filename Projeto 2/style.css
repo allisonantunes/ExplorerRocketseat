@@ -1,6 +1,10 @@
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+
+    background: linear-gradient(180deg, rgba(227,225,248,0) 82.08%, rgba(227,255,248,0.38) 100%);
+
+    min-height: 100vh;
 }
 nav{
     display: flex;
@@ -9,7 +13,8 @@ nav{
 }
 .page {
     width: 1000px;
-    margin: 65px auto 0;
+    margin: 0 auto;
+    padding-top: 65px;
 }
 ul {
     font-family: 'Mulish', sans-serif;
@@ -41,8 +46,12 @@ a{
     text-decoration: none;
     color: #1f1534;
 }
+ul li a {
+    opacity: 0.7;
+}
 ul li a:hover {
     font-weight: bold;
+    opacity: 1;
 }
 section p {
     margin: 40px 0;
@@ -58,11 +67,17 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 14px 32px 15px;
     border-radius: 4px;
-
+    gap: 10px;
+    
+    padding: 14px 32px 15px;
     background-color: #69b99d;
-    border: 1px solid #69b99d;
+    border: 0;
+
+    cursor: pointer;
+}
+button:hover {
+    background: #3f856c;
 }
 footer {
     font-size: 14px;
@@ -72,4 +87,9 @@ footer {
 }
 footer a {
     font-weight: bold;
+}
+#balls {
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
