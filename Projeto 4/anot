@@ -1,0 +1,8 @@
+/* 
+1rem = 16px esse 16px é o padrao do navegador
+
+:root {
+    font-size: 62.5%; vai fazer a pagina ficar por padrao 10px. ( agora 1rem = 10px )
+} 
+
+*/
