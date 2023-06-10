@@ -19,17 +19,16 @@ Substitua X da mensagem, pelo numero de tentativas
 
 let result = prompt("Advinhe o número que estou pensando? Está entre 0 e 10")
 
-const randomNumber = Math.round(Math.random() * 10)
+let number = (Math.round(Math.random() * 10))
+let tentativas = 1
 
-let xAttempts = 1
-
-// enquanto o resultado for diferente de randomNumber faz o alert
-while (Number(result) != randomNumber) {
+while(number != result) {
     result = prompt("Erro, tente novamente!")
-    xAttempts++
+    tentativas++
 }
-if(randomNumber == 1){
-    alert(`Parabéns! o numero que eu pensei foi ${randomNumber} e voce advinhou o numero em ${xAttempts} tentativa`)
+
+if(number == 1){
+    alert(`Parabéns! voce advinhou o numero ${result} em ${tentativas} tentativa`)
 }else {
-    alert(`Parabéns! o numero que eu pensei foi ${randomNumber} e voce advinhou o numero em ${xAttempts} tentativas`)
+    alert(`Parabéns! voce advinhou o numero ${result} em ${tentativas} tentativas`)
 }
