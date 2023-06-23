@@ -6,10 +6,6 @@ const form = document.querySelector('form')
 const inputWeight = document.querySelector('#weight')
 const inputHeight = document.querySelector('#height')
 
-/* const modalWrapper = document.querySelector('.modal-wrapper')
-const modalMessage = document.querySelector('.modal .title span')
-const modalBtnClose = document.querySelector('.modal button.close') */
-
 form.onsubmit = function(event) {
     event.preventDefault()
 
@@ -23,7 +19,6 @@ form.onsubmit = function(event) {
         AlertError.open()
         return
     }
-    AlertError.close()
 
     const result = imc(weight, height)
     displayResultMessage(result)
@@ -32,3 +27,9 @@ function displayResultMessage(result) {
     Modal.message.innerText = `Seu IMC é de ${result}`
     Modal.open()
 }
+/* 
+inputHeight.oninput = () => AlertError.close()
+inputWeight.oninput = () => AlertError.close() 
+oninput toda vez que alterar algo ele aciona o evento.
+*/
+form.oninput = () => AlertError.close()
