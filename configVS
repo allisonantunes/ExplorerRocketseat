@@ -1,0 +1,23 @@
+{
+    "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "material-icon-theme",
+    "explorer.confirmDragAndDrop": false,
+    "git.enableSmartCommit": true
+}
+
+
+
+{
+    "files.autoSave": "onWindowChange",
+    "workbench.colorTheme": "Dracula",
+    "yaml.schemas": {
+        "file:///c%3A/Users/allis/.vscode/extensions/atlassian.atlascode-3.0.2/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "redhat.telemetry.enabled": true,
+    "explorer.confirmDragAndDrop": false,
+    "settingsSync.ignoredExtensions": [
+    
+    ],
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.autofetch": true
+}
