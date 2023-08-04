@@ -11,7 +11,7 @@ class NotesController {
             user_id
         })
         const not_id = Number(note_id)
-        
+
         const tagsInsert = tags.map(name => {
             return {
                 note_id: not_id,
@@ -44,6 +44,35 @@ class NotesController {
             tags,
             links
         })
+    }
+
+    async delete(request, response) {
+        const { id } = request.params
+        await knex("notes").where({id}).delete()
+
+        return response.json()
+    }
+
+    async index(request, response) {
+        const { title, user_id, tags} = request.query
+
+        let notes;
+
+        if(tags) {
+            // converter para vetor
+            const filterTags = tags.split(',').map(tag => tag.trim())
+            
+            notes = await knex("tags")
+            .whereIn("name", filterTags)
+
+        }else {
+            notes = await knex("notes")
+            .where({user_id})
+            .whereLike("title", `%${title}%`)
+            .orderBy("title")
+        }
+
+        return response.json(notes)
     }
 }
 
