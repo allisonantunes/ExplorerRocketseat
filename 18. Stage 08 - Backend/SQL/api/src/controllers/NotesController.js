@@ -10,11 +10,12 @@ class NotesController {
             description,
             user_id
         })
-
+        const not_id = Number(note_id)
+        
         const tagsInsert = tags.map(name => {
             return {
-                note_id: 1,
-                name: name,
+                note_id: not_id,
+                name,
                 user_id: user_id
             }
         })
@@ -22,7 +23,7 @@ class NotesController {
 
         const linksInsert = links.map(link => {
             return {
-                note_id: 1,
+                note_id: not_id,
                 url: link
             }
         })
