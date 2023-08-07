@@ -16,7 +16,7 @@ class NotesController {
             return {
                 note_id: not_id,
                 name,
-                user_id: user_id
+                user_id
             }
         })
         await knex('tags').insert(tagsInsert)
@@ -55,15 +55,23 @@ class NotesController {
 
     async index(request, response) {
         const { title, user_id, tags} = request.query
-
+        console.log(user_id);
         let notes;
 
         if(tags) {
             // converter para vetor
             const filterTags = tags.split(',').map(tag => tag.trim())
-            
+
             notes = await knex("tags")
+            .select([
+                "notes.id",
+                "notes.title",
+                "notes.user_id",
+            ])
+            .where("notes.user_id", user_id)
+            .whereLike("notes.title", `%${title}%`)
             .whereIn("name", filterTags)
+            .innerJoin("notes", "notes.id", "tags.note_id")
 
         }else {
             notes = await knex("notes")
