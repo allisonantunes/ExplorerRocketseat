@@ -1,14 +1,15 @@
 import {Header} from '../../components/Header';
 import {Nav} from '../../components/Nav';
-import {Main} from '../../components/main';
+
 
 import { Container} from './style';
 
-export function Home() {
+
+export function Contact() {
     return (
         <Container>
            <Header />
-            <Main />
+            <h2>Contato</h2>
            <Nav />
         </Container>
     )

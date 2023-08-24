@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {Header} from './components/Header'
+import {Routes} from './routes';
 import GlobalStyles from './styles/global';
 import { ThemeProvider } from 'styled-components';
 
@@ -9,7 +9,7 @@ import theme from './styles/theme';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-          <Header />
+          <Routes />
       <GlobalStyles />
       </ThemeProvider>
   </React.StrictMode>

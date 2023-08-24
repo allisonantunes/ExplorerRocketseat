@@ -1,49 +1,50 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
+        grid-area: header;
         text-align: center;
         border-radius: 20px;
-        width: 395px;
+        width: 250px;
         border: solid 1px #7D7373;
 
-        margin: 76px 100px auto 100px;
+        margin: auto 50px;
 
     h1 {
         text-align: left;
-        margin-left: 35px;
+        margin-left: 22px;
         font-size: 36px;
         margin-top: 20px;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
         span {
             color: ${({ theme }) => theme.COLORS.ORANGE};
         }
     }
     h2 {
-        font-size: 24px;
+        font-size: 20px;
         margin-bottom: 9px;
     }
     p {
         margin-bottom: 22px;
-        font-size: 20px;
+        font-size: 15px;
         color: ${({ theme }) => theme.COLORS.TEXT};
     }
     img {
-        width: 319px;
-        height: 308px;
+        width: 200px;
+        height: 200px;
         border-radius: 20px;
-        margin-bottom: 22px;
+        margin-bottom: 20px;
     }
     button {
-        width: 312px;
-        height: 58px;
+        width: 200px;
+        height: 40px;
         cursor: pointer;
-        margin-top: 58px;
-        margin-bottom: 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
 
         border: none;
         border-radius: 19px;
 
-        font-size: 29px;
+        font-size: 20px;
 
         color: #1D1C1D;
         background-color: ${({ theme }) => theme.COLORS.ORANGE};
@@ -56,4 +57,5 @@ export const Container = styled.header`
         width: 40px;
         height: 40px;
     }
+
 `;
