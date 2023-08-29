@@ -41,7 +41,7 @@ class UsersController {
             throw new AppError('Usuario nao encontrado')
         }
 
-        const updatedEmailUser = await database.get(' SELECT * FROM users WHERE email = (?)', [email])
+        const updatedEmailUser = await database.get(` SELECT * FROM users WHERE email = ${email}`)
         
         if(updatedEmailUser && updatedEmailUser.id !== user.id) {
             throw new AppError('E-mail já está em uso.')
@@ -64,17 +64,25 @@ class UsersController {
             user.password = await hash(password, 8)
         }
 
-        await database.run(`
+/*         await database.run(`
         UPDATE users SET
         name = ${user.name},
         email = ${user.email},
         password = ${user.password},
-        updated_at = DATETIME('now)
+        updated_at = ${new Date()},
         WHERE id = ${user_id}
-        `,)
-       // [user.name, user.email, user.password, user_id])
+        `) */
+        await database.run(`
+        UPDATE users SET
+        name = ? ,
+        email = ?,
+        password = ?,
+        updated_at = DATETIME('now') 
+        WHERE id = ?`,
+        [user.name, user.email, user.password, user_id])
 
         return response.json()
+        /* return response.status(200).json() */
     }   
 }
 

@@ -1,4 +1,3 @@
-// middleware de autenticação
 const { verify } = require('jsonwebtoken')
 const AppError = require('../utils/AppError')
 const authConfig = require('../config/auth')
@@ -9,8 +8,6 @@ function ensureAuthenticated(request, response, next) {
     if(!authHeader) {
         throw new AppError('JWT token não informado', 401)
     }
-    // quebrando o array, pegando a 2 posicao do array, 
-    // ja passando pra variavel token.
     const [, token] = authHeader.split(' ')
 
     try {
