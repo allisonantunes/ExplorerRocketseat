@@ -20,7 +20,7 @@ export function Profile() {
     const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
 
     const [ avatar, setAvatar ] = useState(avatarUrl)
-    const [ avatarFile, setAvatarFIle ] = useState(null)
+    const [ avatarFile, setAvatarFile ] = useState(null)
 
 
     async function handleUpdate() {
@@ -35,7 +35,7 @@ export function Profile() {
 
     function handleChangeAvatar(event) {
         const file = event.target.files[0]
-        setAvatarFIle(file)
+        setAvatarFile(file)
 
         const imagePreview = URL.createObjectURL(file)
         setAvatar(imagePreview)
