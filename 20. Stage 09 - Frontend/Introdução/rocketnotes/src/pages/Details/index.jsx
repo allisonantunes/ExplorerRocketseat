@@ -1,41 +1,98 @@
-import {Container, Links, Content} from "./style.js"
+import {Container, Links, Content} from "./style.js";
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+
+import { api } from '../../services/api'
 
 import { Header } from "../../components/Header/index.jsx";
 import { Section } from "../../components/Section/index.jsx";
-import { Button } from "../../components/Button/"
+import { Button } from "../../components/Button/";
 import { ButtonText } from "../../components/ButtonText/index.jsx";
 import { Tag } from "../../components/Tag/index.jsx";
 
 export function Details() {
+  const [data, setData] = useState(null)
+
+  const params = useParams()
+  const navigate = useNavigate()
+
+  function handleBack() {
+    navigate(-1)
+  }
+
+  async function handleRemove() {
+    const confirm = window.confirm('deseja relmente remover a nota?')
+
+    if(confirm) {
+      await api.delete(`/notes/${params.id}`)
+      handleBack()
+    }
+  }
+
+  useEffect(() => {
+    async function fetchNotes() {
+      const response = await api.get(`/notes/${params.id}`)
+      setData(response.data)
+    }
+    fetchNotes()
+  }, [])
 
   return(
     <Container>
       <Header/>
+      {
+        data &&
       <main>
         <Content>
-          <ButtonText title="Excluir a nota"/>
-            <h1>Introdução ao react</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur
-                adipisicing elit. Accusantium modi officia
-                maiores! Qui quam delectus labore,
-                reprehenderit ut sapiente ipsum eveniet
-                nam repellat iure molestiae sunt repudiandae
-                magnam veniam ab.</p>
+          <ButtonText 
+            title="Excluir a nota"
+            onClick={handleRemove}
+          />
+            <h1>
+              {data.title}
+            </h1>
+
+            <p>
+              {data.description}
+            </p>
+
+            {  data.links &&          
             <Section title="Links úteis">
               <Links>
-                <li><a href="#">www.google.com</a></li>
-                <li><a href="#">www.facebook.com</a></li>
+                {
+                  data.links.map(link => (
+                    <li key={String(link.id)}>
+                      <a href={link.url} target="_blank">
+                        {link.url}
+                      </a>
+                    </li>
+                  ))
+                }
               </Links>
             </Section>
+            }
 
+            {
+              data.tags && 
             <Section title="Marcadores">
-              <Tag title="express" />
-              <Tag title="nodeJs" />
+              {
+                data.tags.map(tag => (
+                  <Tag 
+                  key={String(tag.id)}
+                  title={tag.name}
+                  />
+                ))
+              }
             </Section>
-
-          <Button title="Voltar" />
+            }
+          <Button 
+            title="Voltar" 
+            onClick={handleBack}  
+          />
         </Content>
       </main>
+      }
+
     </Container>
   );
 }

@@ -1,12 +1,13 @@
 import { Container } from "./style";
 
-export function ButtonText({title, isActive, ...rest}) {
+export function ButtonText({title, icon: Icon, ...rest}) {
     return(
         <Container 
             type="button"
-            isActive={isActive}
+            
             {...rest}
         >
+            {Icon && <Icon />}
             {title}
         </Container>
     )
