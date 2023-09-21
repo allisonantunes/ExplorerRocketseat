@@ -1,32 +1,19 @@
 const knex = require('../database/knex')
 const AppError = require('../utils/AppError')
-const sqliteConnection = require('../database/sqlite')
 const {hash, compare} = require('bcryptjs')
+
+const sqliteConnection = require('../database/sqlite')
+const UserRepository = require('../repositories/UserRepository')
+const UserCreateServices = require('../services/UserCreateServices')
 
 class UsersController {
     async create(request, response) {
         const { name, email, password } = request.body
 
-        const database = await sqliteConnection()
+        const userRepository = new UserRepository()
+        const userCreateServices = new UserCreateServices(userRepository)
+        await userCreateServices.execute({name, email, password})
 
-        // const checkUserExists = await database.get(' SELECT * FROM users WHERE email = (?)', [email])
-        const checkUserExists = await knex('users').where({ email }).first()
-
-        if(checkUserExists){
-            throw new AppError('Este e-mail já está em uso')
-        }
-        
-        const hashedPassword = await hash(password, 8)
-
-/*      await database.run('INSERT INTO users (name, email, password) VALUES (?,?,?)',
-        [name, email, hashedPassword]) 
-*/
-        await knex('users').insert({
-            name,
-            email,
-            password: hashedPassword
-          })
-        
         return response.status(201).json()
     }
 
