@@ -1,4 +1,5 @@
 import { Container } from "./styles";
+import { NavLink } from "react-router-dom";
 
 export function Nav() {
     return(
@@ -7,10 +8,25 @@ export function Nav() {
                 <img src="../../public/imagens/logo.png" alt="treine.me" />
             </a>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Treinar</a></li>
-            </ul>
+                <li>< NavLink to='/' style={({ isActive }) => {
+                return {
+                fontWeight: isActive ? "bold" : "",
+                }}}>
+                Home</NavLink></li>
+
+                <li>< NavLink to='/about' style={({ isActive }) => {
+                return {
+                fontWeight: isActive ? "bold" : "",
+                }}}>
+                About</NavLink></li>
+
+                <li>< NavLink to='/train' style={({ isActive }) => {
+                return {
+                fontWeight: isActive ? "bold" : "",
+                }}}>
+                To Train</NavLink></li>
+
+               </ul>
         </Container>
     )
 }

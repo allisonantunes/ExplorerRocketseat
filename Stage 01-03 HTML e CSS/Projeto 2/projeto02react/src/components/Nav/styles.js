@@ -20,8 +20,10 @@ export const Container = styled.nav`
     a {
         text-decoration: none;
         color: #1f1534;
+        /* font-weight: {({ isActive }) => isActive ? "bold" : "normal"} */
     }
     a:hover {
         font-weight: bold;
     }
+
 `

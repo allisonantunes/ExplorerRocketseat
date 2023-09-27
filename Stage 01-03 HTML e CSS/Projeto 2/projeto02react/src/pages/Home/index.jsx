@@ -2,7 +2,10 @@ import { Container, Main } from './styles'
 import { Nav } from '../../components/Nav'
 import { Footer } from '../../components/footer'
 
-export default function App() {
+// reaproveitamento de estrutura 
+import { Outlet } from 'react-router-dom'
+
+export function Home() {
   return(
     <Container>
       <Nav />
@@ -21,7 +24,7 @@ export default function App() {
             </section>
             <img src="../public/imagens/treino.png" alt="Desenho de uma moça pulando corda" />
         </Main>
-
+        < Outlet />
       <Footer />
     </Container>
   )

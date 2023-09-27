@@ -1,12 +1,14 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    padding: 0;
-    margin: 65px auto 0;
+    margin: 0 auto;
+    padding-top: 65px;
 
     width: 1000px;
 
     font-family: 'Open Sans', sans-serif;
+
+    min-height: 80vh;
 
     h1 {
         font-family: 'Mulish', sans-serif;
@@ -22,18 +24,39 @@ export const Container = styled.div`
         color: #89c5cc;
         font-weight: bold;
     }
-    p {
+    section p {
         font-size: 14px;
         line-height: 28px;
         color: #7d7987;
+
+        margin: 40px 0;
     }
+    `
+
+export const Main = styled.main`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     button {
+        color: white;
         text-transform: uppercase;
         font-family: 'Open Sans', sans-serif;
 
-    }
-`
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        
+        padding: 14px 32px 15px;
+        border-radius: 4px;
+        border: none;
+        background: #69b99d;
 
-export const Main = styled.main`
-    
-`
+        cursor: pointer;
+
+    }
+        button:hover {
+            background: #4ea788;
+        }
+` 
