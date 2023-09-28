@@ -14,11 +14,6 @@ export const Container = styled.div`
 
     padding-right: 20px;
 
-    .line {
-        border: 1px solid #685D5D;
-        margin-bottom: 10px;
-    }
-
 `;
 export const Main = styled.main`
 grid-area: main;
@@ -26,40 +21,18 @@ margin: auto 100px;
 padding-right: 90px;
 
 h2 {
-    
+    margin-bottom: 50px;
     font-weight: normal;
     color: #ffffff;
-}
-h3 {
-    font-weight: normal;
-    font-size: 20px;
-    color: ${({ theme }) => theme.COLORS.ORANGE};
 }
 
 p {
     font-size: 15px;
     color: ${({ theme }) => theme.COLORS.TEXT};
-    margin-bottom: 50px;
+    margin-bottom: 15px;
 }
 
 span {
     color: ${({ theme }) => theme.COLORS.ORANGE};
-}
-ul {
-    margin: 50px 30px 0 0;
-    display: inline-block;
-    list-style: none;
-    p {
-        margin-top: 5px;
-    }
-    li {
-        border: 1px solid ${({ theme }) => theme.COLORS.ORANGE};
-        border-radius: 17px;
-        color: ${({ theme }) => theme.COLORS.ORANGE};
-
-        margin-bottom: 20px;
-        padding: 10px;
-
-    }
 }
 `

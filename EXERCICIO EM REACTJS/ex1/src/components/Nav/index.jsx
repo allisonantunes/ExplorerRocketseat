@@ -5,31 +5,37 @@ import { ButtonLink } from "../ButtonLink";
 
 export function Nav() {
     
-
-    function handleTagSelected(tagName){
-        setTagsSelected([tagName])
-    }
     return(
         <Container>
-            <ButtonLink to='/' title={<AiOutlineHome />}
-            isActive 
-            onClick={() => handleTagSelected('all')}
+            <ButtonLink to='/'
+                style={({ isActive }) => {return {color: isActive ? "#FF5C00" : '#7D7373',}}}
+            title={<AiOutlineHome />}
             />
-            <ButtonLink title={<AiOutlineUser />} 
-            onClick={() => handleTagSelected(tag.name)} 
-            isActive={tagsSelected.includes(tag.name)}
+
+            <ButtonLink to='/about'
+                style={({ isActive }) => {return {color: isActive ? "#FF5C00" : '#7D7373',}}}
+            title={<AiOutlineUser />} 
             />
-            <ButtonLink title={<AiOutlineSwitcher />} 
-            onClick={() => handleTagSelected(tag.name)} 
-            isActive={tagsSelected.includes(tag.name)}
+
+            <ButtonLink to='/experience' 
+                style={({ isActive }) => {
+                    return {color: isActive ? "#FF5C00" : '#7D7373',}}}
+            title={<AiOutlineSwitcher />} 
             />
-            <ButtonLink title={<AiOutlineAlignLeft />} 
-            onClick={() => handleTagSelected(tag.name)} 
-            isActive={tagsSelected.includes(tag.name)}
+
+            <ButtonLink to='/specializations' 
+                style={({ isActive }) => {
+                    return {color: isActive ? "#FF5C00" : '#7D7373',}}}
+            title={<AiOutlineAlignLeft />} 
+            
             />
-            <ButtonLink to='/contato' title={<AiOutlineMessage />} 
-            onClick={() => handleTagSelected(tag.name)} 
-            isActive={tagsSelected.includes(tag.name)}
+            <ButtonLink to='/contato' 
+                style={({ isActive }) => {
+                    return {
+                        color: isActive ? "#FF5C00" : '#7D7373',
+                    }
+                }}
+            title={<AiOutlineMessage />} 
             />
         </Container>
     )
