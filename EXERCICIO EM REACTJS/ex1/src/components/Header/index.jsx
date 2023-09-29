@@ -9,13 +9,13 @@ export function Header() {
                 <p>Junior Frontend Developer
                    <br/>and Backend</p>
 
-                <a href="#">
+                <a href="https://www.linkedin.com/in/allison-antunes-16b227226/" target="_blank">
                     <img src="../../public/1.svg" alt="" />
                 </a>
-                <a href="#">
+                <a href="#" target="_blank">
                     <img src="../../public/2.svg" alt="" />
                 </a>
-                <a href="#">
+                <a href="https://www.facebook.com/allison.antunes.73" target="_blank">
                     <img src="../../public/3.svg" alt="" />
                 </a>
 

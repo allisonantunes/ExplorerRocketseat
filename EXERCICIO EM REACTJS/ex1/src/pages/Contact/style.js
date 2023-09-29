@@ -17,6 +17,7 @@ export const Container = styled.div`
     .line {
         border: 1px solid #685D5D;
         margin-bottom: 10px;
+        width: 400px;
     }
 
 `;
@@ -45,21 +46,13 @@ p {
 span {
     color: ${({ theme }) => theme.COLORS.ORANGE};
 }
-ul {
-    margin: 50px 30px 0 0;
-    display: inline-block;
-    list-style: none;
-    p {
-        margin-top: 5px;
-    }
-    li {
-        border: 1px solid ${({ theme }) => theme.COLORS.ORANGE};
-        border-radius: 17px;
-        color: ${({ theme }) => theme.COLORS.ORANGE};
-
-        margin-bottom: 20px;
-        padding: 10px;
-
+.title {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    
+    svg {
+        height: 25px;
     }
 }
 `

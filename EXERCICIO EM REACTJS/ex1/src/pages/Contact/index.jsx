@@ -13,14 +13,17 @@ export function Contact() {
            <Main>
             <h2>Fale <span>Comigo</span></h2>
             <p>Vamos entrar em contato!</p>
-
-                <AiOutlineMail />
+                <div className='title'>
+                <AiOutlineWhatsApp />
                 <h3>Celular</h3>
+                </div>
                 <div className='line'></div>
                 <p>48 9 9697-0393</p>
                 
-                <AiOutlineWhatsApp />
+                <div className='title'>
+                <AiOutlineMail />
                 <h3>Email</h3>
+                </div>
                 <div className='line'></div>
                 <p>allisonabc@hotmail.com</p>
            </Main>
