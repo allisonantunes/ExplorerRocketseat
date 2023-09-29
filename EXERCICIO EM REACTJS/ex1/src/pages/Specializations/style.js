@@ -57,4 +57,10 @@ ul {
 
     }
 }
+@media (max-width: 990px) {
+        margin: auto 0;
+    }
+    h2 {
+        margin-bottom: 0;
+    }
 `

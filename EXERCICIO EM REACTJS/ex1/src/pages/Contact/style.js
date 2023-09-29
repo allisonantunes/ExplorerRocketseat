@@ -27,7 +27,7 @@ margin: auto 100px;
 padding-right: 90px;
 
 h2 {
-    
+    width: 400px;
     font-weight: normal;
     color: #ffffff;
 }
@@ -50,9 +50,20 @@ span {
     display: flex;
     gap: 5px;
     align-items: center;
+    width: 400px;
     
     svg {
         height: 25px;
     }
 }
+@media (max-width: 990px) {
+        margin: auto 0;
+    }
+    @media (max-width: 800px) {
+        margin: auto 0;
+        width: 250px;
+        .line{
+            width: 200px;
+        }
+    }
 `

@@ -36,4 +36,26 @@ export const Container = styled.main`
 
         }
     }
+    @media (max-width: 990px) {
+        margin: auto 0;
+    }
+    @media (max-width: 792px) {
+        margin: auto 0;
+        h2 {
+            font-size: 25px;
+        }
+        h1 {
+            font-size: 25px;
+        }
+        span {
+            font-size: 25px;
+        }
+        div {
+            display: flex;
+        }
+        ul {
+
+            margin-top: 15px;
+        }
+    }
 `;

@@ -35,4 +35,8 @@ p {
 span {
     color: ${({ theme }) => theme.COLORS.ORANGE};
 }
+
+@media (max-width: 990px) {
+        margin: auto 0;
+    }
 `

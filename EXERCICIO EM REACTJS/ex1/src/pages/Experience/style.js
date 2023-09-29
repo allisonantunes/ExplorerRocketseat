@@ -52,4 +52,18 @@ ul {
 
     }
 }
+@media (max-width: 990px) {
+    margin: auto 0;
+    padding: 15px;
+    h2 {
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+    h3 {
+        font-size: 15px;
+    }
+    span {
+        font-size: 30px;
+    }
+}
 `

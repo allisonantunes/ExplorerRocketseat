@@ -58,4 +58,34 @@ export const Container = styled.header`
         height: 40px;
     }
 
+    @media (max-width: 990px) {
+        width: 150px;
+        margin: auto 25px;
+        h1 {
+            font-size: 20px;
+        }
+        h2 {
+            font-size: 15px;
+        }
+        p {
+            font-size: 10px;
+        }
+        img {
+            width: 90%;
+            height: 90%;
+            margin: 0;
+        }
+        a {
+            margin-left: 15px;
+        }
+        a img {
+            width: 20px;
+            height: 20px;
+        }
+        button {
+            width: 100px;
+            margin-top: 0;
+        }
+    }
+
 `;

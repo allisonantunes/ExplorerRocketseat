@@ -15,4 +15,7 @@ export const Container = styled.nav`
         text-decoration: none;
         color: #7D7373;
     }
+    @media (max-width: 990px) {
+       
+    }
 `;
