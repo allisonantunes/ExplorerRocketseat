@@ -25,14 +25,31 @@ export const Container = styled.div`
         line-height: 28px;
         color: #7d7987;
     }
+    #balls {
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+    }
 `
 export const Hero = styled.div`
     width: 592px;
     margin: 0 auto 72px
 `
 export const Footer = styled.footer`
+    font-size: 14px;
+    line-height: 28px;
+    color: #7d7987;
     text-decoration: none;
+
     a + a {
         margin-left: 28px;
     }
+`
+export const Line = styled.div`
+    width: 568px;
+    height: 0px;
+
+    margin: 0 auto 8px;
+
+    border: 1px solid #eceff2;
 `

@@ -1,4 +1,4 @@
-import { Container, Footer, Hero } from './styles'
+import { Container, Footer, Hero, Line } from './styles'
 
 export default function App() {
   return(
@@ -14,6 +14,7 @@ export default function App() {
 
     </Hero>
       <Footer>
+        <Line />
         <a target="_blank" href="http://instagram.com">Instagram</a>
         <a href="mailto:contato@moveis">Fale Conosco</a>
       </Footer>
