@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-size: 24px;
+        }
+        ul {
+            margin-bottom: 50px;
+        }
+        .em-bloco li{
+            background: aqua;
+            margin-bottom: 10px;
+            width: 100px;
+        }
+        .em-linha li{
+            display: inline;
+            background: aqua;
+        }
+        .em-linha-e-bloco li {
+            background: aqua;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+        .esconder {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>display block</h1>
+    <ul class="em-bloco">
+        <p>ocupa a linha toda, largura total da tela</p>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <h1>display inline</h1>
+    <ul class="em-linha">
+        <p>inline nao da de por largura ou altura, nao vai funcionar</p>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <h1>display Inline-block</h1>
+    <p>da para colocar largura e altura. esse na ocupa a largura total da tela</p>
+    <ul class="em-linha-e-bloco">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <h1>display none</h1>
+    <p>esconde na tela</p>
+    <ul class="esconder">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <br>
+    escondido
+</body>
+</html>
