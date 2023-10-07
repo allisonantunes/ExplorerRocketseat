@@ -27,3 +27,67 @@ body {
 .cabecalho ul li a:hover{
     font-weight: bold;
 }
+.painel {
+    background: url(../images/painel.jpg) center center no-repeat;
+    height: 600px;
+}
+.painel h2 {
+    color: white;
+    font-size: 60px;
+    font-weight: 400;
+
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.secao-com-texto {
+    padding: 153px;
+    text-align: center;
+    clear: both;
+}
+.secao-com-texto img {
+    width: 170px;
+    height: 170px;
+    margin-bottom: 70px;
+}
+.secao-com-texto h2 {
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 37px;
+}
+.secao-com-texto p {
+    font-size: 18px;
+    width: 700px;
+
+    margin: 0 auto;
+
+    margin-bottom: 70px;
+}
+.onde-estamos p{
+    font-size: 28px;
+    width: 450px;
+}
+.ladrilho div {
+    float: left;
+}
+.ladrilho .grande {
+    background: url('../images/4.jpg') center center no-repeat;
+    width: 50%;
+    height: 600px;
+}
+.ladrilho .pequeno {
+    background: url('../images/3.jpg') center center no-repeat;
+    height: 300px;
+    width: 25%;
+}
+.ladrilho .pequeno.grao {
+    background: url('../images/2.jpg') center center no-repeat;
+    height: 300px;
+    width: 25%;
+}
+.ladrilho .medio {
+    background: url('../images/1.jpg') center center no-repeat;
+    height: 300px;
+    width: 50%;
+}
