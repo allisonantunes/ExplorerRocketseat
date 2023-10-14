@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* usar um . para espaço fazio. */
+.container {
+    display: grid;
+/*     grid-template-areas: 
+    'header header header'
+    'menuu section aside'
+    'foooter footer footer'
+    ; */
+    grid: 
+    'header header header' 200px
+    'menuu section aside' 400px
+    'footer footer footer' 250px
+    / 160px auto 69px
+    ;
+}
+
+.cabecalho {
+    background-color: aqua;
+    grid-area: header;
+}
+.menu {
+    background-color: blue;
+    grid-area: menuu;
+}
+.secao {
+    background-color: blueviolet;
+    grid-area: section;
+}
+.aside {
+    background-color: orange;
+    grid-area: aside;
+}
+.rodape {
+    background-color: brown;
+    grid-area: footer;
+}
