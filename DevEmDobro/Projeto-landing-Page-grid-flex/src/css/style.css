@@ -6,7 +6,8 @@ html {
 
 body {
     display: grid;
-    grid-template-areas: "header header header header"
+    grid-template-areas: 
+        "header header header header"
         "hero hero hero hero"
         "about about about about"
         "services services services services"
