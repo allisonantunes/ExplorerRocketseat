@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let frutas = ['banana', 'maça', 'pera', 'uva']
+        let quantidadefrutas = frutas.length
+
+        for(let i = 0; i < quantidadefrutas; i++) {
+            console.log(frutas[i]);
+        }
+
+        // ou pode percorrer o array com o forEach
+
+        frutas.forEach( (item, indice, array) => {
+            console.log(item);
+            console.log(`item: ${item}, indice: ${indice}, array: ${array}`);
+        })
+
+        // adicionar um item no final do array
+        frutas.push('manga')
+        // adicionar um item no inicio do array
+        frutas.unshift('manga')
+        // remover o ultimo item do array
+        frutas.pop()
+        // remover o primeiro item do array
+        frutas.shift()
+        // posicao de algum item
+        let posicaoMaça = frutas.indexOf('maça')
+        console.log(posicaoMaça);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
