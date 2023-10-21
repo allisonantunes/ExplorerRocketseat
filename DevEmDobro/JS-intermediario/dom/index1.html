@@ -8,8 +8,9 @@
         function add() {
             let novoComentario = document.getElementsByName('novo-comentario')
             let textoDigitado = novoComentario[0].value
+
             novosComentarios = document.getElementById('comentario')
-            novosComentarios.innerHTML += `<p>  </p> `
+            novosComentarios.innerHTML += `<p>novo comentario: ${textoDigitado}  </p> `
         }
 
     </script>
