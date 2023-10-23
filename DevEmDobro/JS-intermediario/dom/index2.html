@@ -4,20 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .fonteGrande {
+            font-size: 40px;
+        }
+    </style>
     <script>
 
         function alterarCorFundo() {
-            let posts = document.getElementsByClassName('post')
-
+            let post = document.getElementsByClassName('post')
             let primeiroPost = post[0]
             primeiroPost.style.backgroundColor = 'red'
+        }
+
+        // add classe mo html
+        function alterarFonte() {
+            let post = document.getElementsByClassName('post')
+            let primeiroPost = post[0]
+            primeiroPost.classList.add('fonteGrande')
+        }
+
+        function marcarRadio(genero) {
+            let radioMas = document.getElementById('genero-masculino')
+            let radioFem = document.getElementById('genero-feminino')
+
+            if(genero === 'M') {
+                radioMas.checked = true
+            }else if (genero === 'F') {
+                radioFem.checked = true
+            }
         }
 
     </script>
 </head>
 <body>
+    <button onclick="alterarCorFundo()"> cor </button>
+    <button onclick="alterarFonte()"> fonte </button>
 
+    <p class="post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dicta sapiente temporibus dolores, autem necessitatibus est, corporis ducimus consectetur provident quae, doloribus officia et molestias? Impedit obcaecati molestiae soluta sequi.</p>
 
-
+    <button onclick="marcarRadio('F')"> marcar radio feminino </button>
+    <button onclick="marcarRadio('M')"> marcar radio masculino </button>
+    </br>
+    Masculino<input type="radio" name="genero" id="genero-masculino">
+    Feminino<input type="radio" name="genero" id="genero-feminino">
 </body>
 </html>
