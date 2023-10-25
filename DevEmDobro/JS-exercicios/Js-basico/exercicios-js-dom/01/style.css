@@ -36,9 +36,8 @@
     height: 700px;
     top: 15%;
     left: 180px;
-    /*  top: 40%;
-    left: 180px; */
     padding: 65px 60px;
+    border-radius: 10px;
 }
 .texto {
     display: flex;
@@ -47,7 +46,6 @@
 }
 h1 {
     font-size: 5rem;
-    line-height: 58px;
     font-weight: 400;
     padding-bottom: 80px;
 }
@@ -64,7 +62,38 @@ a {
     color: #C50000;
     font-weight: 700;
 }
+.botao-rosa{
+    color: #C50000;
+}
+.botao-azul{
+    color: #10acdd;
+}
+.botao-verde{
+    color: #d9dd10;
+}
+.botao-laranja{
+    color: #a63a17;
+}
 .fundo {
     width: 100%;
     height: 100%;
+}
+.seta-voltar, .seta-avancar {
+    position: absolute;
+    z-index: 1;
+}
+.seta-avancar {
+    right: 4%;
+}
+.seta-voltar {
+    left: 4%;
+    transform: rotateY(180deg);
+}
+.imagem-seta {
+    width: 50px;
+    height: 50px;
+}
+.opacidade {
+    opacity: 0.6;
+    cursor: default;
 }
