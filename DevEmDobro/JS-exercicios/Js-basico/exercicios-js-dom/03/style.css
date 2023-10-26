@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background-image: url(./imagens/bg-repeat.jpg);
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    gap: 73px;
+    margin: 30px;
+    margin-bottom: 0;
+    align-items: center;
+}
+header {
+    width: 300px;
+    color: white;
+}
+header h1 {
+    font-weight: 900;
+    font-size: 20px;
+}
+header p {
+    margin-top: 11px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+}
+span {
+    color: #F52E2E;
+    font-size: 8px;
+    font-weight: 400;
+    margin-bottom: 6px;
+}
+h4 {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 11px;
+}
+form {
+    padding: 20px;
+    min-width: 340px;
+    min-height: 378px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+input {
+    padding-left: 9px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    margin-top: 3px;
+}
+#mensagem {
+    padding-left: 5px;
+    margin-top: 8px;
+}
+.btn {
+    color: white;
+    background-color: #3CCC87;
+    border-radius: 5px;
+    border: none;
+    border: 12px;
+    cursor: pointer;
+}
+span {
+    opacity: 0;
+}
+.spanDisplay {
+    display: block;
+}
+.obrigatorio {
+    border-color: #F52E2E;
+}
+.preenchido {
+    border-color: #00C22B;
+}
