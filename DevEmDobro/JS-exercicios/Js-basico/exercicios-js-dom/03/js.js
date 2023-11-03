@@ -1,5 +1,6 @@
 formulario = document.querySelectorAll('form')
 
+
 function formEnviar() {
     nome = document.querySelector("input[name='nome']")
     email = document.querySelector("input[name='email']")
@@ -10,11 +11,12 @@ function formEnviar() {
     emailP = document.querySelector('.email')
     telefoneP = document.querySelector('.telefone')
     mensagemP = document.querySelector('.mensagem')
-
+    mudarCor = document.querySelector('.nomeInput')
     
     if(!nome.value) {
-        nome.style.borderColor = '#F52E2E'
         nomeP.classList.add('spanP')
+        mudarCor.classList.add('obrigatorio')
+        // nome.style.borderColor = '#F52E2E'
     } else {
         nome.style.borderColor = '#00C22B'
     }
@@ -32,11 +34,11 @@ function formEnviar() {
     } else {
         telefone.style.borderColor = '#00C22B'
     }
-/*     if(!mensagem) {
-        mensagem.style.borderColor = '#F52E2E'
-    } else {
-        console.log('certo');
-    } */
 
+    //if(!mensagem) {
+    //    mensagem.style.borderColor = '#F52E2E'
+    //} else {
+    //    console.log('certo');
+    //}
 
 }
