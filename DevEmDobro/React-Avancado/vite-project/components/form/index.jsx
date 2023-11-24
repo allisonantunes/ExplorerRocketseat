@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
-export function Form(props) {
+export const Form = (props) => {
     const [inputs, setInputs] = useState({
         image: '',
-        name: '',
+        value: '',
         suit: ''
     })
 
@@ -11,9 +11,11 @@ export function Form(props) {
         const { target } = event
         const { name } = target
         const { value } = target
+        // como se fosse: event.target.value = value
 
         setInputs({
-            image: event.target.value
+            ...inputs,
+            [name]: value
         })
     }
 
@@ -30,20 +32,23 @@ export function Form(props) {
     }
 
     return (
+        <>
         <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="image">Endereço da imagem da carta</label>
                 <input type="text" id="image" name="image" onChange={handleInputChange} value={inputs.image}/>
             </div>
             <div>
-                <label htmlFor="name">nome da carta</label>
-                <input type="text" id="name" name="name" onChange={handleInputChange} value={inputs.image}/>
+                <label htmlFor="value">nome da carta</label>
+                <input type="text" id="name" name="value" onChange={handleInputChange} value={inputs.value}/>
             </div>
             <div>
                 <label htmlFor="suit">naipe da carta</label>
-                <input type="text" id="suit" name="suit" onChange={handleInputChange} value={inputs.image}/>
+                <input type="text" id="suit" name="suit" onChange={handleInputChange} value={inputs.suit}/>
             </div>
             <input type="submit" />
         </form>
+        </>
+        
     )
 }
