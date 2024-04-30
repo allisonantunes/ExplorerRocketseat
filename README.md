@@ -7,5 +7,3 @@ comandos git
 - git push para enviar ao repositorio
 
 readme.so
-
--Parei na aula 13 sobre git
