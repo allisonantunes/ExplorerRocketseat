@@ -1,0 +1,10 @@
+{
+    "server": {
+    "baseDir": "./",
+    "index": "index.html"
+    
+      },
+    
+    "files": ["./**/*"],
+    "open": false
+  }
