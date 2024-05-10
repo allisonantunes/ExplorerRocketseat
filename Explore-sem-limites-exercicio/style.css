@@ -21,7 +21,7 @@ body{
     width: 98vw;
     height: 100vh;
 
-    #astrounauta {
+    #astronaut {
         width: 720px;
         height: 732px;
     }
@@ -137,7 +137,7 @@ footer {
         justify-content: initial;
         align-items: center;
         flex-direction: column;
-        #astrounauta {
+        #astronaut {
             width: 464px;
             height: 470px;
         }
@@ -206,7 +206,7 @@ footer {
         justify-content: initial;
         align-items: center;
         flex-direction: column;
-        #astrounauta {
+        #astronaut {
             width: 364px;
             height: 370px;
         }
